@@ -1,0 +1,72 @@
+body{
+    background-color:aquamarine;
+    background-image: url()
+}
+header {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    display: flex; /* Usamos flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.logo h1 {
+    margin: 0; /* Elimina el margen del título */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el espaciado interno */
+    display: flex; /* Muestra los elementos en línea */
+}
+
+nav ul li {
+    margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+}
+h1
+{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'Times New Roman', Times Georgia, 'Times New Roman', Times, serif;
+}
+h2
+{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'Times New Roman', Times Georgia, 'Times New Roman', Times, serif;
+}
+p
+{
+    text-align: justify;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 35px;
+    white-space: inherit;;
+}
+h3
+{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'Times New Roman', Times Georgia, 'Times New Roman', Times, serif;
+}
+li
+{
+    text-align: justify;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+ol
+{
+    text-align: justify;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+}

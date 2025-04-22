@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contactanos - Redbovino</title>
+    <link rel="stylesheet" href="Contactanos.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init('RiNCb384QqoyJF5eI'); // Asegúrate que esta es tu clave pública
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Redbovino</h1>
+        </div>
+        <center><img src="../Redbovino sin fondo.png" width="150px"></center>
+        <nav>
+            <ul>
+                <li><a href="../El ganado vacuno en ambiente humano_r.html">Inicio</a></li>
+                <li><a href="../Contacto/Redes Sociales.html">Redes Sociales</a></li>
+                <li><a href="../Sobre nosotros/Sobre Nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1 style="text-align: center;">Formulario</h1>
+        <form id="form">
+            <fieldset>
+                <h2>Formulario de Contacto</h2>
+
+                <div class="field">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <br>
+                <div class="field">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                </div>
+                <br>
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <br>
+                <div class="field">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+                </div>
+                <br>
+                <input type="submit" id="button" value="Enviar">
+            </fieldset>
+        </form>
+
+        <script>
+            document.getElementById('form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                emailjs.sendForm('service_d38e8ef', 'template_21y8ybv', this)
+                    .then(function (response) {
+                        alert('Mensaje enviado con éxito');
+                        console.log('SUCCESS!', response.status, response.text);
+                    }, function (error) {
+                        alert('Ocurrió un error al enviar el mensaje');
+                        console.log('FAILED...', error);
+                    });
+
+                this.reset();
+            });
+        </script>
+    </div>
+
+    <footer>&copy; 2025 Redbovino. Todos los derechos reservados.</footer>
+</body>
+
+</html>
